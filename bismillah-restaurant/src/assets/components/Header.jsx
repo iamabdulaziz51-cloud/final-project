@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-import "./Header.css";
+// header.jsx
+import React from 'react';
+import Social from '.Social'
+import './header.css'; // optional CSS for styling
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   return (
     <header className="header">
-      <div className="container">
-        {/* Logo */}
-        <div className="logo">TravelWorld</div>
+      <div className="logo">
+        <h1>MyWebsite</h1>
+      </div>
 
-        {/* Navigation Links */}
-        <nav className={`nav ${isOpen ? "open" : ""}`}>
-          <ul>
-            <li><a href="#hero" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="#destinations" onClick={() => setIsOpen(fa
+      <nav className="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact"></a>
+        
+</nav>
+</header>
+  );
+}
